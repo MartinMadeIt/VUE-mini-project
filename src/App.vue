@@ -1,17 +1,20 @@
 <template>
   <Navbar />
   <Header />
+  <TilesView />
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Navbar from './components/Navbar.vue';
+import TilesView from './components/Tiles/TilesView.vue';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Navbar
+    Navbar,
+    TilesView
   }
 }
 </script>
