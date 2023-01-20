@@ -2,6 +2,7 @@
     <div class="tiles">
         <SingleTile accesor=partner />
         <SingleTile accesor=employee />
+        <SingleTile accesor=makro />
     </div>
 </template>
 
@@ -28,6 +29,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 150px;
+        gap: 100px;
     }
 </style>

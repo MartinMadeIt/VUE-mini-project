@@ -1,5 +1,5 @@
 <template>
-    <div class="singleTile">
+    <div class="singleTile" :class="{'left' : !dataObject.left}">
         <img 
             :src=dataObject.photo 
             :alt=dataObject.alternativePhotoText
@@ -8,6 +8,13 @@
         <div class="textField">
             <p class="textField__description">{{ dataObject.description }}</p>
             <p class="textField__text">{{ dataObject.text }}</p>
+        </div>
+
+        <div 
+            class="singleTile__icon" 
+            :class="{'left-icon' : !dataObject.left}"
+            v-if="!dataObject.makro">
+            <img :src=dataObject.icon :alt=dataObject.alternativeIconText >
         </div>
     </div>
 </template>
@@ -27,6 +34,7 @@
                 icon : TILEINFOS[props.accesor].icon,
                 description : TILEINFOS[props.accesor].description,
                 text: TILEINFOS[props.accesor].text,
+                makro: TILEINFOS[props.accesor].makro,
                 left: TILEINFOS[props.accesor].left
             }
 
@@ -38,7 +46,6 @@
 <style scoped lang="scss">
     .singleTile {
         padding: calc(10px + 2vw) 0px;
-        width: 98%;
         margin-top: 50px;
         width: clamp(300px, 95%, 700px);
         background-color: #fff;
@@ -54,8 +61,9 @@
         &__image {
             width: 50%;
             aspect-ratio: 1/1;
-            transform: translateY(-6vw);
+            transform: translateY(-10vw);
             z-index: 1;
+            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.181);
         }
 
         .textField {
@@ -74,6 +82,101 @@
                 font-size: .9em;
             }
         }
+
+        &__icon {
+            box-sizing: border-box;
+            aspect-ratio: 1;
+            background-color: rgb(255, 106, 0);
+
+            display: none;
+
+            img {
+                width: 100%;
+                aspect-ratio: 1;
+            }
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        .singleTile {
+        position: relative;
+        padding: calc(10px + 2vw) 0px;
+        width: clamp(700px, 98%, 1000px);
+        margin-top: 150px;
+        background-color: transparent;
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+        box-shadow: none;
+
+
+        &__image {
+            width: clamp(300px, 40%, 400px);
+            aspect-ratio: 1;
+            transform: none;
+            z-index: 1;
+            box-shadow: none;
+        }
+
+        .textField {
+            font-family: 'Maven Pro', sans-serif;
+            font-size: calc(14px + 0.5vw);
+            text-align: start;
+            width: clamp(300px, 40%, 400px);
+            aspect-ratio: 1;
+            background-color: #fff;
+            padding: 30px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+
+            transform: translateY(50px);
+
+            &__description {
+                font-size: 1.2em;
+            }
+
+            &__text {
+                font-size: .7em;
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            top: 0;
+            right: 35%;
+            box-sizing: border-box;
+            aspect-ratio: 1;
+            width: 100px;
+            background-color: rgb(255, 106, 0);
+            padding: clamp(20px, 2vw, 40px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: translateY(30px);
+
+            img {
+                width: 100%;
+                aspect-ratio: 1;
+            }
+        }
+
+        .left-icon {
+            left: 15%;
+        }
+    }
+
+    .left {
+        flex-direction: row-reverse;
+    }
+
+
     }
 
 </style>
