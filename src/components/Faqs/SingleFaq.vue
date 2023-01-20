@@ -57,9 +57,9 @@ import { ref } from 'vue';
             box-sizing: border-box;
             position: relative;
             overflow: hidden;
-            overflow-y: visible;
+
             width: 100%;
-            min-height: 60px;
+            height: 60px;
             border-bottom: 1px solid grey;
             padding: 5px 0px;
 

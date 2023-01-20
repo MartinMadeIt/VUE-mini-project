@@ -4,7 +4,6 @@
     <nav class="navbar">
         <img src="../assets/Photos/logo.png" alt="Logo" class="navbar__logo">
 
-        <!-- <img class="navbar__logo" /> -->
         <div class="options">
             <p class="options__p">Some</p>
             <p class="options__p">Options</p>
@@ -15,11 +14,11 @@
         </button>
 
         <div class="menu" :class="{'toggled' : active}">
-            <p class="options__p">Some</p>
-            <p class="options__p">Options</p>
-            <p class="options__p">Available</p>
+            <p class="options__p" :class="{'toggledP' : active}">Some</p>
+            <p class="options__p" :class="{'toggledP' : active}">Options</p>
+            <p class="options__p" :class="{'toggledP' : active}">Available</p>
         </div>
-        <!-- <div class='indicator' :class="{'active' : active}"/> -->
+
     </nav>
     
 </template>
@@ -120,7 +119,7 @@ export default {
 
     .menu {
         width: 100%;
-        height: 150px;
+        height: 0px;
         background-color: #fff;
 
         position: absolute;
@@ -128,11 +127,25 @@ export default {
         left: 0;
 
         gap: 20px;
+        transition: 250ms;
 
-        display: none;
+        .options__p {
+            opacity: 0;
+            transition-duration: 0ms;
+            transition-delay: 0ms;
+
+        }
+
+        .toggledP {
+            opacity: 1;
+            transition-delay: 250ms;
+            transition-duration: 250ms;
+        }
+
     }
 
     .toggled {
+        height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
