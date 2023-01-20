@@ -2,9 +2,11 @@
   <Navbar />
   <Header />
   <TilesView />
+  <FaqsView />
 </template>
 
 <script>
+import FaqsView from './components/Faqs/FaqsView.vue';
 import Header from './components/Header.vue'
 import Navbar from './components/Navbar.vue';
 import TilesView from './components/Tiles/TilesView.vue';
@@ -14,8 +16,9 @@ export default {
   components: {
     Header,
     Navbar,
-    TilesView
-  }
+    TilesView,
+    FaqsView
+}
 }
 </script>
 

@@ -1,6 +1,7 @@
 <template>
     <div class="tiles">
         <SingleTile accesor=partner />
+        <TileText />
         <SingleTile accesor=employee />
         <SingleTile accesor=makro />
     </div>
@@ -8,11 +9,13 @@
 
 <script>
     import SingleTile from './SingleTile.vue';
+    import TileText from './TileText.vue';
 
     export default {
         name: 'AllTiles',
         components: {
-            SingleTile
+            SingleTile,
+            TileText
         },
         setup() {
 

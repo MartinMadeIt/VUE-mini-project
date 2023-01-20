@@ -4,7 +4,7 @@
     <nav class="navbar">
         <img src="../assets/Photos/logo.png" alt="Logo" class="navbar__logo">
 
-        <img class="navbar__logo" />
+        <!-- <img class="navbar__logo" /> -->
         <div class="options">
             <p class="options__p">Some</p>
             <p class="options__p">Options</p>
@@ -27,7 +27,6 @@
 
 
 <script>
-import { watch } from 'vue';
 import { ref } from 'vue';
 
 
@@ -38,8 +37,6 @@ export default {
         const active = ref(false)
 
         const changeState = () => active.value = !active.value
-
-        watch(active, () => console.log(active.value))
 
         return {active, changeState}
     }

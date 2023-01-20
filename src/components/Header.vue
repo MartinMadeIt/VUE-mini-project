@@ -18,7 +18,6 @@ export default {
 
   .container__header {
     width: 100vw;
-    height: clamp(250px, 20vw, 350px);
     font-family: 'Maven Pro', sans-serif;
     height: clamp(250px, 20vw, 350px);
 
@@ -27,6 +26,8 @@ export default {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    font-size: calc(16px + 1.2vw);
 
     display: flex;
     flex-direction: column;
@@ -38,11 +39,11 @@ export default {
 
         &__description {
             font-weight: 700;
-            font-size: 2rem;
+            font-size: 2em;
         }
 
         &__navigate {
-            font-size: 1rem;
+            font-size: .7em;
             color: rgb(255, 255, 255);
             text-shadow: 0 0 3px rgb(0, 0, 0);
         }
@@ -52,7 +53,6 @@ export default {
 
   @media screen and (max-width: 600px) {
     .container {
-      
       .header {
         
         &__navigate {
