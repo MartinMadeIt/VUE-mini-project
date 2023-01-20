@@ -45,6 +45,7 @@ export default {
 
 
 <style lang="scss">
+@import "../Utilities/utilities.scss";
 
     .navbar {
         position: fixed;
@@ -53,9 +54,7 @@ export default {
         background-color: #fff;
         padding: 10px 30px;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include spaceB;
         z-index: 20;
 
 
@@ -67,7 +66,7 @@ export default {
 
 
         .options {
-            font-family: "Maven Pro", sans-serif;
+            font-family: $maven;
             width: 600px;
 
             display: none;
@@ -79,20 +78,8 @@ export default {
                 cursor: pointer;
                 overflow: hidden;
 
-                &::before {
-                    position: absolute;
-                    content: '';
-                    left: -100%;
-                    bottom: 0;
-                    width: 100%;
-                    background-color: rgb(255, 106, 0);
-                    height: 3px;
-                    transition: 250ms;
-                }
-
-                &:hover::before {
-                    left: 0;
-                }
+                // on hover
+                @include underlinedOnHover;
             }
         }
     }
@@ -101,7 +88,7 @@ export default {
         width: 100px;
         height: 40px;
         border: none;
-        border-radius: 12px;
+
         background-color: transparent;
         color: rgba(0, 0, 0, 0.439);
         font-size: 36px;

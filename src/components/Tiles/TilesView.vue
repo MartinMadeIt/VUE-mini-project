@@ -24,14 +24,13 @@
 </script>
 
 <style scoped lang="scss">
+@import "../../Utilities/utilities.scss";
     .tiles {
         width: 100%;
         min-height: 800px;
         padding: 20px;
-        display: flex;
+        @include center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         gap: 100px;
     }
 </style>

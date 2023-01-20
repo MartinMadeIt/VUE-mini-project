@@ -19,16 +19,16 @@
 </script>
 
 <style scoped lang="scss">
+@import "../../Utilities/utilities.scss";
 
     .tileText {
-        font-family: 'Maven Pro', sans-serif;
+        font-family: $maven;
         font-size: calc(16px + 0.6vw);
         margin: 50px auto;
+        margin-bottom: 0px;
 
-        display: flex;
+        @include center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
         text-align: center;
 
@@ -47,16 +47,7 @@
 
         .underlined {
             position: relative;
-
-            &::before {
-                position: absolute;
-                content: '';
-                bottom: 0px;
-                left: 0px;
-                width: 100%;
-                height: 5px;
-                background-color: rgb(255, 106, 0);
-            }
+            @include underlined;
         }
     }
 

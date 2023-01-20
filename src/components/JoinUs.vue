@@ -15,6 +15,8 @@
 </script>
 
 <style scoped lang="scss">
+
+@import "../Utilities/utilities.scss";
     .joinUs {
         margin: 60px auto;
         width: clamp(250px, 70%, 600px);
@@ -22,12 +24,10 @@
         background-color: #fff;
         padding: calc(10px + 1vw) calc(5px + 1vw);
 
-        font-family: 'Maven Pro', sans-serif;
+        font-family: $maven;
 
-        display: flex;
+        @include spaceB;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
 
 
         &__img {
@@ -40,7 +40,7 @@
             position: relative;
             height: 50%;
             width: 80%;
-            background-color: rgb(255, 106, 0);
+            background-color: $orange;
             color: white;
             border: none;
             cursor: pointer;
@@ -54,7 +54,7 @@
                 left: -100%;
                 width: 100%;
                 height: 100%;
-                background-color: green;
+                background-color: $green;
                 z-index: -1;
                 transition: 250ms ease-in-out;
             }

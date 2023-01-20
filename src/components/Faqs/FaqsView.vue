@@ -27,17 +27,17 @@ import { QUESTIONS } from '@/Utilities/mocks';
 </script>
 
 <style scoped lang="scss">
+@import "../../Utilities/utilities.scss";
+
     .faqs {
         width: 98%;
         margin-top: 150px;
         margin-bottom: 200px;
         font-size: calc(14px + 1vw);
-        font-family: 'Maven Pro', sans-serif;
+        font-family: $maven;
 
-        display: flex;
+        @include center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
         &__header {
             text-align: center;
@@ -53,15 +53,7 @@ import { QUESTIONS } from '@/Utilities/mocks';
         .underlined {
             position: relative;
 
-            &::before {
-                position: absolute;
-                content: '';
-                bottom: -3px;
-                left: 0px;
-                width: 100%;
-                height: 3px;
-                background-color: rgb(255, 106, 0);
-            }
+            @include underlined;
         }
     }
 

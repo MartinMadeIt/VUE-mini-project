@@ -44,16 +44,16 @@
 </script>
 
 <style scoped lang="scss">
+    @import "../../Utilities/utilities.scss";
     .singleTile {
         padding: calc(10px + 2vw) 0px;
         margin-top: 50px;
         width: clamp(300px, 95%, 700px);
         background-color: #fff;
 
-        display: flex;
+        @include spaceB;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+
         gap: 30px;
         box-shadow: 4px 4px 20px 0px #0000003b;
 
@@ -67,7 +67,7 @@
         }
 
         .textField {
-            font-family: 'Maven Pro', sans-serif;
+            font-family: $maven;
             font-size: calc(14px + 0.5vw);
             text-align: center;
             width: clamp(250px, 60%, 500px);
@@ -86,7 +86,7 @@
         &__icon {
             box-sizing: border-box;
             aspect-ratio: 1;
-            background-color: rgb(255, 106, 0);
+            background-color: $orange;
 
             display: none;
 
@@ -98,6 +98,7 @@
     }
 
     @media screen and (min-width: 900px) {
+
         .singleTile {
         position: relative;
         padding: calc(10px + 2vw) 0px;
@@ -121,7 +122,7 @@
         }
 
         .textField {
-            font-family: 'Maven Pro', sans-serif;
+            font-family: $maven;
             font-size: calc(14px + 0.5vw);
             text-align: start;
             width: clamp(300px, 40%, 400px);
@@ -129,10 +130,9 @@
             background-color: #fff;
             padding: 30px;
 
-            display: flex;
+            @include center;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: center;
 
             transform: translateY(50px);
 
@@ -152,7 +152,7 @@
             box-sizing: border-box;
             aspect-ratio: 1;
             width: 100px;
-            background-color: rgb(255, 106, 0);
+            background-color: $orange;
             padding: clamp(20px, 2vw, 40px);
 
             display: flex;
