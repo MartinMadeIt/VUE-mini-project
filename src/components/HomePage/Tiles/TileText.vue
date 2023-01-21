@@ -19,7 +19,7 @@
 </script>
 
 <style scoped lang="scss">
-@import "../../Utilities/utilities.scss";
+@import "../../../Utilities/utilities.scss";
 
     .tileText {
         font-family: $maven;

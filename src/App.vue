@@ -1,27 +1,12 @@
 <template>
-  <Navbar />
-  <Header />
-  <TilesView />
-  <FaqsView />
-  <JoinUs />
+  <RouterView />
 </template>
 
 <script>
-import FaqsView from './components/Faqs/FaqsView.vue';
-import Header from './components/Header.vue'
-import JoinUs from './components/JoinUs.vue';
-import Navbar from './components/Navbar.vue';
-import TilesView from './components/Tiles/TilesView.vue';
+
 
 export default {
   name: 'App',
-  components: {
-    Header,
-    Navbar,
-    TilesView,
-    FaqsView,
-    JoinUs
-}
 }
 </script>
 

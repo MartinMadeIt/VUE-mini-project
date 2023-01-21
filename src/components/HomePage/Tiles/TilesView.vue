@@ -24,7 +24,7 @@
 </script>
 
 <style scoped lang="scss">
-@import "../../Utilities/utilities.scss";
+@import "../../../Utilities/utilities.scss";
     .tiles {
         width: 100%;
         min-height: 800px;

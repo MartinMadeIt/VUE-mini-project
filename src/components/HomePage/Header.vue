@@ -22,7 +22,7 @@ export default {
     height: clamp(250px, 20vw, 350px);
 
     color: white;
-    background-image: url("../assets/Photos/header.jpg");
+    background-image: url("@/assets/Photos/header.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

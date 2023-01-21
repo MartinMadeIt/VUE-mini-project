@@ -44,7 +44,7 @@
 </script>
 
 <style scoped lang="scss">
-    @import "../../Utilities/utilities.scss";
+    @import "../../../Utilities/utilities.scss";
     .singleTile {
         padding: calc(10px + 2vw) 0px;
         margin-top: 50px;

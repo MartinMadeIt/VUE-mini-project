@@ -27,7 +27,7 @@ import { QUESTIONS } from '@/Utilities/mocks';
 </script>
 
 <style scoped lang="scss">
-@import "../../Utilities/utilities.scss";
+@import "../../../Utilities/utilities.scss";
 
     .faqs {
         width: 98%;

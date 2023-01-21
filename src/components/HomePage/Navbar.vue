@@ -2,7 +2,7 @@
 <template>
 
     <nav class="navbar">
-        <img src="../assets/Photos/logo.png" alt="Logo" class="navbar__logo">
+        <img src="../../assets/Photos/logo.png" alt="Logo" class="navbar__logo">
 
         <div class="options">
             <p class="options__p">Some</p>
@@ -45,7 +45,7 @@ export default {
 
 
 <style lang="scss">
-@import "../Utilities/utilities.scss";
+@import "../../Utilities/utilities.scss";
 
     .navbar {
         position: fixed;

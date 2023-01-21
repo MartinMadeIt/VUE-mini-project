@@ -1,22 +1,25 @@
 <template>
     <div class="joinUs">
-        <img src="../assets/Photos/share.png" alt="share" class="joinUs__img">
+        <img src="../../assets/Photos/share.png" alt="share" class="joinUs__img">
         <p class="joinUs__text">Dołącz do nas ! </p>
-        <button class="joinUs__button">
+        <RouterLink to="/form" class="joinUs__button">
             <p class="button__text">Formularz zgłoszeniowy</p>
-        </button>
+        </RouterLink>
     </div>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
     export default {
-        name: 'JoinUs'
-    }
+    name: "JoinUs",
+    components: { RouterLink }
+}
 </script>
 
 <style scoped lang="scss">
 
-@import "../Utilities/utilities.scss";
+@import "../../Utilities/utilities.scss";
     .joinUs {
         margin: 60px auto;
         width: clamp(250px, 70%, 600px);
@@ -36,16 +39,34 @@
             width: clamp(45px, 20%, 70px);
         }
 
+        a,
+        a:link,
+        a:visited,
+        a:active {
+            color: #fff;
+            font-family: $maven;
+            text-decoration: none;
+            @include center;
+            text-align: center;
+
+            p {
+                width: 100%;
+                font-size: .8em;
+                padding: 10px;
+            }
+        }
+
         &__button {
             position: relative;
             height: 50%;
-            width: 80%;
+            width: 90%;
             background-color: $orange;
             color: white;
             border: none;
             cursor: pointer;
             overflow: hidden;
             transform-style: preserve-3d;
+
 
             &::before {
                 content: '';
@@ -76,7 +97,7 @@
             }
 
             &__button {
-                width: 150px;
+                width: 180px;
                 height: 60px;
             }
         }
