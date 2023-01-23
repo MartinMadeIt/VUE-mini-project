@@ -66,10 +66,7 @@
                     placeholder="E-mail"
                     label="Second label"
                 />
-                <div class="allowCheck">
-                    <input type="checkbox" :checked="defaultValueCheckbox" >
-                    <p>*Wyrazam zgodę na przetwarzanie moich danych przez firmę XYZ, a takze otrzymywanie informacji handlowych drogą emailową</p>
-                </div>
+
                 <button 
                     type="submit"
                     class="submit"
@@ -94,7 +91,7 @@ import NavbarForm from './NavbarForm.vue';
 import ControlButtonsForm from './ControlButtonsForm.vue';
 import FormIndicator from './FormIndicator.vue';
 import FormInput from './FormInput.vue';
-import { setPositionInLStorage, getPositionFromLStorage } from "../../Controllers/useLocalStorage"
+import { setPositionInLStorage } from "../../Controllers/useLocalStorage"
 
     export default {
     name : 'FormView', 
@@ -118,10 +115,8 @@ import { setPositionInLStorage, getPositionFromLStorage } from "../../Controller
             // setPositionInLStorage(e.target.elements.company.name, e.target.elements.company.value)
         }
 
-        const defaultValueCheckbox = getPositionFromLStorage('allowMarketing') ? getPositionFromLStorage('allowMarketing') : false
 
-
-        return {current, steps,  handleNext, handlePrev, handleSubmit, defaultValueCheckbox, setPositionInLStorage}
+        return {current, steps,  handleNext, handlePrev, handleSubmit, setPositionInLStorage}
     }
 }
 </script>
@@ -151,18 +146,6 @@ import { setPositionInLStorage, getPositionFromLStorage } from "../../Controller
                 gap: 30px;
             }
 
-            &__thirdSection {
-
-                .allowCheck {
-                    @include center;
-                    gap: 10px;
-                    width: clamp(300px, 60%, 500px);
-                    text-align: justify;
-                    font-size: 10px;
-
-                }
-
-            }
         }
 
         .submit {
@@ -170,7 +153,7 @@ import { setPositionInLStorage, getPositionFromLStorage } from "../../Controller
             height: 40px;
             border-radius: 50%;
             font-size: 24px;
-            border: 1px solid $green;
+            border: none;
             color: $green;
             cursor: pointer;
             transition: all 250ms;
@@ -178,8 +161,7 @@ import { setPositionInLStorage, getPositionFromLStorage } from "../../Controller
 
             &:hover {
                 opacity: 1;
-                background-color: $green;
-                color: white;
+                text-shadow: 0px 0px 8px $green;
             }
 
             &:active {
