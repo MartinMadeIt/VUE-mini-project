@@ -124,7 +124,10 @@ import { setPositionInLStorage } from "../../Controllers/useLocalStorage"
             // setPositionInLStorage(e.target.elements.company.name, e.target.elements.company.value)
         }
 
-        const clearData = () => window.localStorage.clear()
+        const clearData = () => {
+            window.localStorage.clear()
+            location.reload()
+        }
 
         return {current, steps,  handleNext, handlePrev, handleSubmit, setPositionInLStorage, clearData}
     }
