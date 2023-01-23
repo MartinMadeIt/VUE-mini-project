@@ -1,5 +1,5 @@
 <template>
-    <div class="faqs">
+    <div class="faqs" id="faqs">
         <h3 class="faqs__header">Najczęściej zadawane <span class="underlined">pytania</span></h3>
         <div class="faqs__questions">
             <SingleFaq 

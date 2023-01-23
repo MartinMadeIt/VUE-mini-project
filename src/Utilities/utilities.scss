@@ -41,3 +41,16 @@
         transition: 250ms;
     }
 }
+
+@mixin submitClearButtons {
+    min-width: 120px;
+    aspect-ratio: 2/1;
+
+    margin: 50px 0px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 250ms;
+    opacity: .5;
+}

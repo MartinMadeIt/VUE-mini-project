@@ -1,5 +1,5 @@
 <template>
-    <div class="tiles">
+    <div class="tiles" id="pros">
         <SingleTile accesor=partner />
         <TileText />
         <SingleTile accesor=employee />

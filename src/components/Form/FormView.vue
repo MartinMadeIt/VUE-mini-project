@@ -66,11 +66,23 @@
 
             </div>
 
-            <button 
-                type="submit"
-                class="submit"
+            <div 
+                class="buttonsControl"
                 v-show="current === 3"
-            >Submit <i class="uil uil-check-circle"></i></button>
+            >
+                <button 
+                    type="submit"
+                    class="submit"
+                >Submit</button>
+
+                <button 
+                    class="clearData"
+                    type="button"
+                    @click="clearData"
+                >Clear Data</button>
+
+            </div>
+
         </form>
 
         <ControlButtonsForm 
@@ -112,8 +124,9 @@ import { setPositionInLStorage } from "../../Controllers/useLocalStorage"
             // setPositionInLStorage(e.target.elements.company.name, e.target.elements.company.value)
         }
 
+        const clearData = () => window.localStorage.clear()
 
-        return {current, steps,  handleNext, handlePrev, handleSubmit, setPositionInLStorage}
+        return {current, steps,  handleNext, handlePrev, handleSubmit, setPositionInLStorage, clearData}
     }
 }
 </script>
@@ -151,24 +164,38 @@ import { setPositionInLStorage } from "../../Controllers/useLocalStorage"
 
         }
 
-        .submit {
-            width: clamp(150px, 60%, 250px);
-            aspect-ratio: 4/1;
+        .buttonsControl {
+            width: 100%;
+            @include center;
+            gap: 10px;
+        }
 
-            margin: 100px auto;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: 400;
+        .submit {
+            @include submitClearButtons;
+            @include center;
             border: 1px solid $green;
             color: $green;
-            cursor: pointer;
-            transition: all 250ms;
-            opacity: .5;
-            @include center;
 
             &:hover {
                 opacity: 1;
                 background-color: $green;
+                color: white;
+            }
+
+            &:active {
+                transform: scale(.7)
+            }
+        }
+
+        .clearData {
+            @include submitClearButtons;
+            @include center;
+            border: 1px solid rgb(138, 0, 0);
+            color: rgb(138, 0, 0);
+
+            &:hover {
+                opacity: 1;
+                background-color: rgb(138, 0, 0);
                 color: white;
             }
 

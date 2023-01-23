@@ -46,7 +46,7 @@ import { getPositionFromLStorage } from '@/Controllers/useLocalStorage';
     gap: 30px;
 
     .input {
-        width: clamp(150px, 60%, 250px);
+        width: clamp(250px, 60%, 350px);
         aspect-ratio: 4/1;
 
         border: 1px solid $main;

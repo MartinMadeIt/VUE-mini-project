@@ -4,10 +4,12 @@
     <TilesView />
     <FaqsView />
     <JoinUs />
+    <GoTop />
   </template>
   
   <script lang="js">
   import FaqsView from './Faqs/FaqsView.vue';
+import GoTop from './GoTop.vue';
   import Header from './Header.vue';
   import JoinUs from './JoinUs.vue';
   import Navbar from './Navbar.vue';
@@ -16,12 +18,13 @@
   export default {
     name: 'App',
     components: {
-      Header,
-      Navbar,
-      TilesView,
-      FaqsView,
-      JoinUs
-  }
+    Header,
+    Navbar,
+    TilesView,
+    FaqsView,
+    JoinUs,
+    GoTop
+}
   }
   </script>
   

@@ -5,9 +5,11 @@
         <p class="navbar__logo">LOGO </p>
 
         <div class="options">
-            <p class="options__p">Some</p>
-            <p class="options__p">Options</p>
-            <p class="options__p">Available</p>
+            <a href="#pros">Współpraca</a>
+            <a href="#faqs">FAQ</a>
+            <a href="#form">Formularz</a>
+            <!-- <p class="options__p">Options</p> -->
+            <!-- <p class="options__p">Available</p> -->
         </div>
         <button class="btn" @click="changeState">
             <i class="uil uil-list-ul"></i>
@@ -123,7 +125,6 @@ export default {
             opacity: 0;
             transition-duration: 0ms;
             transition-delay: 0ms;
-
         }
 
         .toggledP {

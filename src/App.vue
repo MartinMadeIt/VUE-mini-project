@@ -24,4 +24,8 @@ export default {
   overflow: hidden;
   background-color: rgba(128, 128, 128, 0.14);
 }
+
+html {
+  scroll-behavior: smooth;
+}
 </style>

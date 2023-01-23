@@ -1,5 +1,5 @@
 <template>
-    <div class="joinUs">
+    <div class="joinUs"  id="form">
         <img src="../../assets/Photos/share.png" alt="share" class="joinUs__img">
         <p class="joinUs__text">Dołącz do nas ! </p>
         <RouterLink to="/form" class="joinUs__button">
