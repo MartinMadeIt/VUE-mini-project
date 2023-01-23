@@ -47,6 +47,7 @@ import { ref } from 'vue';
 </script>
 
 <style scoped lang="scss">
+@import '../../../Utilities/utilities.scss';
 
     .singleQuestion {
         font-family: 'Maven Pro', sans-serif;
@@ -81,7 +82,7 @@ import { ref } from 'vue';
                 transform-origin: center;
 
                 &:hover {
-                    color: rgb(255, 106, 0);
+                    color: $main;
                 }
 
                 &:active {
@@ -91,12 +92,12 @@ import { ref } from 'vue';
 
             .toggled {
                 transform: rotate(180deg);
-                color: rgb(255, 106, 0);
+                color: $main;
             }
 
             &::before {
                 content: '';
-                background-color: rgb(255, 106, 0);
+                background-color: $main;
                 position: absolute;
                 bottom: 0px;
                 left: -100%;
@@ -110,13 +111,13 @@ import { ref } from 'vue';
             }
 
             &--active {
-                border-bottom: 2px solid rgb(255, 106, 0);
+                border-bottom: 2px solid $main;
                 position: relative;
 
 
                 &::before {
                     content: '';
-                    background-color: rgb(255, 106, 0);
+                    background-color: $main;
                     position: absolute;
                     bottom: 0px;
                     left: 0;

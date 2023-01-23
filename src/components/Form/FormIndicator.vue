@@ -32,7 +32,7 @@
             z-index: -1;
             width: 100%;
             height: 1px;
-            background-color: $orange;
+            background-color: $main;
             top: 50%;
             left: 0;
         }
@@ -43,15 +43,15 @@
             height: 40px;
             border-radius: 50%;
             background-color: white;
-            border: 1px solid $orange;
-            color: $orange;
+            border: 1px solid $main;
+            color: $main;
             @include center;
             transition: 
                 transform 450ms cubic-bezier(0.89, -0.22, 0, 2),
                 background-color 350ms;
 
             &--active {
-                background-color: $orange;
+                background-color: $main;
                 color: white;
                 transform: scale(1.5);
             }

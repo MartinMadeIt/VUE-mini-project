@@ -86,7 +86,7 @@
         &__icon {
             box-sizing: border-box;
             aspect-ratio: 1;
-            background-color: $orange;
+            background-color: $main;
 
             display: none;
 
@@ -152,7 +152,7 @@
             box-sizing: border-box;
             aspect-ratio: 1;
             width: 100px;
-            background-color: $orange;
+            background-color: $main;
             padding: clamp(20px, 2vw, 40px);
 
             display: flex;

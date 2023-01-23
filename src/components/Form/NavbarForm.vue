@@ -2,8 +2,8 @@
 <template>
 
     <nav class="navbar">
-        <img src="../../assets/Photos/logo.png" alt="Logo" class="navbar__logo">
-
+        
+        <p class="navbar__logo">LOGO</p>
         <RouterLink to="/">Home</RouterLink>
     
     </nav>
@@ -13,19 +13,9 @@
 
 
 <script>
-import { ref } from 'vue';
-
-
 
 export default {
     name: 'NavbarComponent',
-    setup() {
-        const active = ref(false)
-
-        const changeState = () => active.value = !active.value
-
-        return {active, changeState}
-    }
 }
 </script>
     

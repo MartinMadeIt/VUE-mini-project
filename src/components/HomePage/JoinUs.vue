@@ -60,7 +60,7 @@ import { RouterLink } from 'vue-router';
             position: relative;
             height: 50%;
             width: 90%;
-            background-color: $orange;
+            background-color: $main;
             color: white;
             border: none;
             cursor: pointer;

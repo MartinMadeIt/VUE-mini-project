@@ -58,14 +58,14 @@
         }
 
         &__next {
-            background-color: $orange;
+            background-color: $main;
             opacity: .6;
             color: white;
         }
 
         &__prev {
-            border: 1px solid $orange;
-            color: $orange;
+            border: 1px solid $main;
+            color: $main;
         }
     }
 

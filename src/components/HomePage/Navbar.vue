@@ -2,7 +2,7 @@
 <template>
 
     <nav class="navbar">
-        <img src="../../assets/Photos/logo.png" alt="Logo" class="navbar__logo">
+        <p class="navbar__logo">LOGO </p>
 
         <div class="options">
             <p class="options__p">Some</p>
@@ -62,6 +62,9 @@ export default {
             width: 110px;
             z-index: 10;
             margin-top: 30px;
+            font-weight: 700;
+            color: $main;
+            font-size: 24px;
         }
 
 

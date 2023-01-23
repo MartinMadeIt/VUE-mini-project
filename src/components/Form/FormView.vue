@@ -1,37 +1,36 @@
 <template>
     <NavbarForm />
-    <div class="form">
+    <div class="form"
+    >
         <FormIndicator 
             :current=current 
             :steps=steps
         />
 
-        <div class="formField">
-
-            <form 
-            class="formField__firstSection"
-            v-if="current === 1"
+        <form 
+            class="formField"
             @submit.prevent="handleSubmit"
+        >
+            <div 
+            class="formField__firstSection"
+            v-show="current === 1"
             >
                 <FormInput 
                 name="company"
                 placeholder="Nazwa Firmy"
                 label="Company"
                 />
+
                 <FormInput 
                 name="address"
                 placeholder="Adres"
                 label="Address"
                 />
-                <button 
-                    type="submit"
-                    class="submit"
-                ><i class="uil uil-check-circle"></i></button>
-            </form>
+        </div>
 
-            <form 
+            <div 
             class="formField__firstSection"
-            v-else-if="current === 2"
+            v-show="current === 2"
             @submit.prevent="handleSubmit"
             >
                 <FormInput 
@@ -51,14 +50,11 @@
                 placeholder="Kraj działalności"
                 label="Second label"
                 />
-                <button 
-                    type="submit"
-                    class="submit"
-                ><i class="uil uil-check-circle"></i></button>
-        </form>
-        <form 
-            class="formField__firstSection"
-            v-else
+            </div>
+
+            <div 
+            class="formField__thirdSection"
+            v-show="current === 3"
             @submit.prevent="handleSubmit"
             >
                 <FormInput 
@@ -67,14 +63,15 @@
                     label="Second label"
                 />
 
-                <button 
-                    type="submit"
-                    class="submit"
-                ><i class="uil uil-check-circle"></i></button>
-            </form>
 
-            
-        </div>
+            </div>
+
+            <button 
+                type="submit"
+                class="submit"
+                v-show="current === 3"
+            >Submit <i class="uil uil-check-circle"></i></button>
+        </form>
 
         <ControlButtonsForm 
             @next-step="handleNext"
@@ -133,8 +130,10 @@ import { setPositionInLStorage } from "../../Controllers/useLocalStorage"
 
 
         .formField {
-            height: 400px;
+            min-height: 400px;
             padding: 60px;
+            @include center;
+            flex-direction: column;
 
             &__firstSection,
             &__secondSection,
@@ -146,22 +145,31 @@ import { setPositionInLStorage } from "../../Controllers/useLocalStorage"
                 gap: 30px;
             }
 
+            &__thirdSection {
+                gap: 100px;
+            }
+
         }
 
         .submit {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 24px;
-            border: none;
+            width: clamp(150px, 60%, 250px);
+            aspect-ratio: 4/1;
+
+            margin: 100px auto;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 400;
+            border: 1px solid $green;
             color: $green;
             cursor: pointer;
             transition: all 250ms;
             opacity: .5;
+            @include center;
 
             &:hover {
                 opacity: 1;
-                text-shadow: 0px 0px 8px $green;
+                background-color: $green;
+                color: white;
             }
 
             &:active {

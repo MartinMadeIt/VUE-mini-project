@@ -49,7 +49,7 @@ import { getPositionFromLStorage } from '@/Controllers/useLocalStorage';
         width: clamp(150px, 60%, 250px);
         aspect-ratio: 4/1;
 
-        border: 1px solid $orange;
+        border: 1px solid $main;
         opacity: .6;
         border-radius: 4px;
         padding: 10px;
@@ -57,7 +57,7 @@ import { getPositionFromLStorage } from '@/Controllers/useLocalStorage';
 
         &:focus {
             outline: none;
-            border: 1px solid $orange;
+            border: 1px solid $main;
             opacity: 1;
         }
     }

@@ -15,6 +15,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../../Utilities/utilities.scss";
 
   .container__header {
     width: 100vw;
@@ -22,30 +23,45 @@ export default {
     height: clamp(250px, 20vw, 350px);
 
     color: white;
-    background-image: url("@/assets/Photos/header.jpg");
+    background-image: url("../../assets/Photos/header2.avif");
+
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     background-size: cover;
 
     font-size: calc(16px + 1.2vw);
+    position: relative;
 
-    display: flex;
+    @include center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
+
+    &:before {
+      background-color: rgba(0, 0, 157, 0.149);
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
     .header {
         height: 30%;
         flex-direction: column;
 
+
         &__description {
             font-weight: 700;
             font-size: 2em;
+            z-index: 3;
         }
 
         &__navigate {
             font-size: .7em;
             color: rgb(255, 255, 255);
             text-shadow: 0 0 3px rgb(0, 0, 0);
+            z-index: 3;
+
         }
     }
   }
