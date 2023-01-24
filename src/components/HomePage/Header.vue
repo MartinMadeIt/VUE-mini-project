@@ -1,8 +1,8 @@
 <template>
   <section class="container__header">
     <div class="header"></div>
-    <p class="header__navigate">Strona główna / Franczyza</p>
-    <p class="header__description">Franczyza</p>
+    <p class="header__navigate">Strona główna / Poznaj Nas</p>
+    <p class="header__description">Poznaj Nas</p>
   </section>
 </template>
 
