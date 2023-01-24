@@ -1,6 +1,6 @@
 import partnerPhoto from "../assets/Photos/talking.png"
 import employeePhoto from "../assets/Photos/employee.png"
-import makroCartPhoto from "../assets/Photos/makro.jpg"
+import cartPhoto from "../assets/Photos/cart.avif"
 import handsIcon from "../assets/Photos/hands.svg"
 import clapIcon from "../assets/Photos/clap.svg"
 
@@ -25,7 +25,7 @@ export const TILEINFOS = {
         left: false
     },
     makro : {
-        photo : makroCartPhoto,
+        photo : cartPhoto,
         alternativePhotoText : "Oferta",
         alternativeIconText : "Oferta ikona",
         description : "Trzeci, wyjątkowy atut, ale nie ostatni",

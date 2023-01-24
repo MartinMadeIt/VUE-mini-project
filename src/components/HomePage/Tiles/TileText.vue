@@ -1,13 +1,13 @@
 <template>
     <div class="tileText">
         <p class="tileText__becomeMember">
-            Zostań częścią rozpoznawalnej marki
+            Poznaj bliej naszą ofertę i bądź jak
         </p>
         <p class="tileText__description tileText__description--bolded">
-            Ponad <span class="underlined">2000</span> sklepów 
+            Ponad <span class="underlined">3.14</span> zadowolonych 
         </p>
         <p class="tileText__description">
-            w całej Polsce
+            klientów z całego świata
         </p>
     </div>
 </template>
@@ -37,10 +37,10 @@
         }
 
         &__description {
-            font-size: 2em;
+            font-size: 1.6em;
 
             &--bolded {
-                font-size: 1.8em;
+                font-size: 2em;
                 font-weight: 700;
             }
         }
