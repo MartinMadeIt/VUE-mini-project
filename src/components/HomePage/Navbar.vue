@@ -8,17 +8,15 @@
             <a href="#pros">Współpraca</a>
             <a href="#faqs">FAQ</a>
             <a href="#form">Formularz</a>
-            <!-- <p class="options__p">Options</p> -->
-            <!-- <p class="options__p">Available</p> -->
         </div>
         <button class="btn" @click="changeState">
             <i class="uil uil-list-ul"></i>
         </button>
 
         <div class="menu" :class="{'toggled' : active}">
-            <p class="options__p" :class="{'toggledP' : active}">Some</p>
-            <p class="options__p" :class="{'toggledP' : active}">Options</p>
-            <p class="options__p" :class="{'toggledP' : active}">Available</p>
+            <a href="#pros" class="options__p" :class="{'toggledP' : active}">Współpraca</a>
+            <a href="#faqs" class="options__p" :class="{'toggledP' : active}">FAQ</a>
+            <a href="#form" class="options__p" :class="{'toggledP' : active}">Formularz</a>
         </div>
 
     </nav>

@@ -1,10 +1,10 @@
 <template>
-    <div class="tiles" id="pros">
+    <section class="tiles" id="pros">
         <SingleTile accesor=partner />
         <TileText />
         <SingleTile accesor=employee />
         <SingleTile accesor=makro />
-    </div>
+    </section>
 </template>
 
 <script>

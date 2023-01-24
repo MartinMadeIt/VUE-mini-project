@@ -1,9 +1,9 @@
 <template>
-  <div class="container__header">
+  <section class="container__header">
     <div class="header"></div>
     <p class="header__navigate">Strona główna / Franczyza</p>
     <p class="header__description">Franczyza</p>
-  </div>
+  </section>
 </template>
 
 <script>
